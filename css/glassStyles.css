@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 1;
     font-size: 16px;
 }
 
@@ -11,15 +11,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(To right, rgb(128, 0, 128, .4), 50%, rgb(255, 255, 255, .5));
-    opacity: .9;
+    background: linear-gradient( To right, rgb(128, 0, 128, 0.4), 50%, rgb(255, 255, 255, 0.5));
+    opacity: 0.9;
 }
 
 .first-layer {
     width: 70%;
     height: 80vh;
-    background: linear-gradient(to left, rgb(128, 0, 128, .7), 40%, rgba(238, 160, 255, 0.7));
-    opacity: .6;
+    background: linear-gradient( to left, rgb(128, 0, 128, 0.7), 40%, rgba(238, 160, 255, 0.7));
+    opacity: 0.6;
     z-index: 1;
 }
 
@@ -27,7 +27,7 @@ main {
 .sphere2 {
     width: 200px;
     height: 200px;
-    background: linear-gradient(to bottom right, rgb(128, 0, 128, .7), 40%, rgb(255, 255, 255, .7));
+    background: linear-gradient( to bottom right, rgb(128, 0, 128, 0.7), 40%, rgb(255, 255, 255, 0.7));
     border-radius: 50%;
 }
 
