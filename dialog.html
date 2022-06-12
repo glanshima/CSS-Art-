@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dialogstyles.css" />
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1 class="h1">Dialog</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis illum vitae, voluptatibus eius repellat omnis temporibus libero ab dolor ex ea, earum qui perferendis quos nemo expedita ipsum necessitatibus rem!
+        </p>
+        <button id="open_dialog">Open Dialog</button>
+        <dialog aria-labelledby="dialog_title" aria-describedby="dialog_description">
+            <img src="https://native-dialog.surge.sh/location-service.svg" alt="Illustration of Location Service" />
+
+            <h2 id="dialog_title" class="h2">Use Location Service?</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laborum nesciunt omnis accusantium nemo laboriosam alias,
+            </p>
+            <div class="flex flex-space-between">
+                <button id="close_dialog">Close</button>
+                <button id="confirm_dialog" class="cta">Confirm</button>
+            </div>
+        </dialog>
+
+        <div class="image-egg"></div>
+    </main>
+</body>
+
+</html>
