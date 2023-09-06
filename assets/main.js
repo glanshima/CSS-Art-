@@ -3,7 +3,7 @@ const header = document.querySelector('.header');
 const canvas = document.querySelector('.canvas');
 const menuIcon = document.querySelector('.menu-icon ');
 const menu = document.querySelector('.menu ');
-let canvasPos = canvas.getBoundingClientRect().bottom;
+/* let canvasPos = canvas.getBoundingClientRect().bottom; */
 let menuOpenedState = false;
 /* event delegation  */
 

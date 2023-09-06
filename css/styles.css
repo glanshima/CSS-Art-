@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Playfair+Display&display=swap');
 *,
 ::after,
 ::before {
@@ -192,15 +193,18 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 2px 5px 10px #2E323F;
+    flex-direction: column;
 }
 
 .yellow-board {
     background-color: rgb(251, 184, 0);
-    width: 90%;
-    height: 90vh;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
+        border-radius: .5rem;
+        box-shadow: 2px 5px 5px #2E323F;
 }
 
 .egg {
@@ -252,7 +256,7 @@ body {
     width: 80%;
     max-width: 400px;
     height: 400px;
-    margin: 10% auto;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -433,6 +437,391 @@ body {
     top: 10px;
     left: 10px;
 }
+/* ******** Mickey Arts ******** */
+
+
+
+/* .canva {
+    background: #f39f33;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+ */
+.card {
+    background: #fff;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.name h1 {
+    font-family: 'La Belle Aurore';
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px white,
+        1px 1px 2px #f39f33;
+    margin-top: .5rem;
+}
+
+.head-frame {
+    position: relative;
+    border: 1px solid transparent;
+    padding: 2rem;
+    border-radius: 5px;
+    background: #f39f33;
+    box-shadow: 0 3px 5px #000,
+        2px 3px 5px #000,
+        2px 3px 5px #000,
+        2px 3px 5px #000;
+}
+
+/*Head */
+.head {
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1.5;
+
+}
+
+.head::after,
+.head::before {
+    content: "";
+    height: 150px;
+    width: 90px;
+    background: #fff;
+    z-index: 3;
+    position: absolute;
+    border-radius: 50%;
+    right: 40px;
+    top: 35px;
+    rotate: 15deg;
+
+}
+
+.head::before {
+    rotate: -15deg;
+    left: 40px;
+}
+
+.head-chin {
+    width: 200px;
+    height: 150px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    translate: -50% 0;
+    z-index: 1;
+
+}
+
+.head-chin::after,
+.head-chin::before {
+    content: " ";
+    background-color: white;
+    height: 100px;
+    width: 40px;
+    z-index: 3;
+    position: absolute;
+    border-top-right-radius: 550px;
+    border-top-left-radius: 250px;
+    border-bottom-right-radius: 550px;
+    rotate: 55deg;
+    position: absolute;
+    right: 40px;
+    bottom: -1%;
+
+}
+
+.head-chin:after {
+    transform: scaleX(-1);
+    left: 40px;
+    rotate: -55deg;
+    bottom: -1%;
+
+
+}
+
+.head-jaw {
+    width: 110px;
+    height: 105px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    translate: -50% 0;
+    rotate: 90deg;
+    z-index: 1.5;
+
+}
+
+.head-jaw.white {
+    content: '';
+    height: 90px;
+    width: 70px;
+    background: #fff;
+    position: absolute;
+    bottom: 10px;
+    z-index: 5;
+    rotate: 180deg;
+}
+
+/* ears */
+
+.ear {
+    width: 150px;
+    height: 80px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -10%;
+}
+
+.left-ear {
+    left: -10%;
+    rotate: 45deg;
+}
+
+.right-ear {
+    right: 0;
+    rotate: 55deg;
+}
+
+/* eye */
+
+.eye {
+    width: 25px;
+    height: 70px;
+    background: #000;
+    position: absolute;
+    z-index: 6;
+    top: 70px;
+    border-radius: 50%;
+    rotate: -9deg;
+
+}
+
+.right-eye {
+    right: 70px;
+}
+
+.left-eye {
+    left: 75px;
+}
+
+
+/* nose */
+.nose-line.dark,
+.mouth-line {
+    width: 50px;
+    height: 8px;
+    background: #000;
+    position: absolute;
+    top: 140px;
+    right: 70px;
+    z-index: 6;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+
+}
+
+.nose-line.white,
+.nose {
+    content: '';
+    width: 45px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    top: 144px;
+    right: 72px;
+    z-index: 6;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.nose {
+    width: 35px;
+    height: 20px;
+    top: 146px;
+    right: 74px;
+    background: #000;
+}
+
+
+/* mouth  */
+
+.mouth {
+    width: 75px;
+    height: 40px;
+    background: #000;
+    position: absolute;
+    top: 172px;
+    left: 67px;
+    z-index: 6;
+
+    border-radius: 50%;
+}
+
+.mouth::after,
+.mouth::before {
+    content: '';
+    width: 80px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    left: 0px;
+    z-index: 6;
+    border-radius: 50%;
+}
+
+.mouth::before {
+    width: 35px;
+    height: 18px;
+    background: #ffc0cb;
+    top: 20px;
+    left: 20px;
+}
+
+.mouth-line {
+    width: 35px;
+    height: 10px;
+    background: #000;
+    top: 171px;
+
+}
+
+.mouth-line.left {
+    rotate: -130deg;
+    left: 45px;
+}
+
+.mouth-line.left::after,
+.mouth-line.right::after {
+    content: '';
+    width: 25px;
+    height: 8px;
+    background: #000;
+    top: 2px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+}
+
+.mouth-line.left::after {
+    left: 25px;
+    rotate: -65deg;
+}
+
+.mouth-line.right {
+    rotate: 130deg;
+    right: 35px;
+}
+
+.mouth-line.right::after {
+    right: 25px;
+    rotate: 65deg;
+}
+
+/* ******** Food Arts ******** */
+.plate_board {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #ff8f27;
+    border-radius: .5rem;
+    box-shadow: 2px 5px 5px #2E323F;
+}
+
+.plate {
+    /*border: 1px solid red;*/
+    background: rgb(139, 0, 0);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    transform: rotateX(-245deg);
+    position: relative;
+    box-shadow: 0px -14px #f7f2f2;
+}
+
+.plate::before {
+    content: '';
+    display: block;
+    /*border: 1px solid red;*/
+    background: rgb(139, 0, 0);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    transform: rotateX(-202deg) translate3d(0, 20px, -100px);
+    position: absolute;
+    top: -20px;
+    right: -200;
+    z-index: 0;
+    box-shadow: inset 15px 17px 100px #9e1b1b;
+}
+
+.poundo {
+    background: #fafad2;
+    border-radius: 45%;
+    width: 120px;
+    height: 230px;
+    position: inherit;
+    top: 200px;
+    left: 150px;
+    box-shadow: 4px -50px 0px black, inset 2px 60px 20px #5a5a5a;
+}
+
+.bowl {
+    background-image: radial-gradient(circle at 2px 2px, #eeee87 1px, rgb(71, 31, 31) 2px);
+    background-size: 1px 1px;
+    border-radius: 50%;
+    width: 140px;
+    height: 240px;
+    position: absolute;
+    bottom: 100px;
+    left: 150px;
+    transform: rotateY(360deg);
+    box-shadow: 4px -30px 40px black, inset 2px -40px 20px rgb(31, 34, 170), inset 10px 40px 0px #1f2c9c;
+}
+
+.semo {
+    background: #fafad2;
+    border-radius: 49%;
+    width: 120px;
+    height: 230px;
+    position: inherit;
+    top: -40%;
+    left: 30px;
+    transform: scaleY(15deg);
+    box-shadow: 4px -50px 10px black, inset 1px 60px 20px #5a5a5a;
+}
 .footer {
     color: var(--white);
     padding: .760rem;
@@ -440,8 +829,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-
 
 
 /* ******** Media Queries @  700px 43.75 instead of (960 60em ) ******** */
