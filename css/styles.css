@@ -228,6 +228,211 @@ body {
     transform: rotate(0deg);
     box-shadow: -33px 70px 20px 1px rgba(1, 1, 1, 0.6), inset 47px -47px 60px rgb(167, 167, 70);
 }
+/* ******** Teddy Bear Arts ******** */
+/* checked box styles */
+
+.box {
+    /* background-image: radial-gradient(circle at 1px 2px, rgb(80, 37, 2) 1px, rgb(255, 255, 255) 10px);
+    background-size: 15px 15px;
+    width: 520px;
+    height: 530px; */
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+
+/* Teddy bear Art */
+
+.checkered_board {
+    background-image: radial-gradient(circle at 1px 2px, rgb(80, 37, 2) 1px, rgb(255, 255, 255) 10px);
+    background-size: 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    height: 400px;
+    margin: 10% auto;
+    position: relative;
+}
+
+
+/* Bear Head */
+
+.teddy-head {
+    width: 250px;
+    height: 250px;
+    background: rgb(66, 9, 9);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 5px 15px 30px 3px #0e0d0d, inset 30px 3px 30px #9e1b1b, inset -20px -3px 30px #9e1b1b;
+    z-index: 1000;
+}
+
+
+/* teddy eyes */
+
+.teddy-eye-left,
+.teddy-eye-right {
+    width: 50px;
+    height: 60px;
+    background: #f7f2f2;
+    margin: 10px;
+    border-radius: 49%;
+}
+
+
+/*
+.teddy-eye-left:hover,
+.teddy-eye-right:hover {
+    height: 70px;
+}
+*/
+
+.teddy-eye-left {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+
+/* left eyeball */
+
+.teddy-eye-left::after {
+    content: '';
+    display: block;
+    background: #000;
+    height: 30px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.teddy-eye-right {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+}
+
+
+/* right eye ball */
+
+.teddy-eye-right::after {
+    content: '';
+    display: block;
+    background: #000;
+    height: 30px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border-radius: 50%;
+}
+
+
+/*
+.teddy-eye-left:hover::after,
+.teddy-eye-right:hover::after {
+    top: 15px;
+    right: 20px;
+}
+*/
+
+.teddy-nose {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f7f2f2;
+    position: absolute;
+    top: 45%;
+    left: 31%;
+    box-shadow: 3px -2px 20px #010101;
+}
+
+
+/* mouth line */
+
+.teddy-nose::before {
+    content: ')';
+    display: block;
+    height: 35px;
+    width: 25px;
+    position: absolute;
+    top: 60px;
+    right: 32px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    font-size: 4em;
+    color: #000;
+}
+
+
+/* black nose tip and white stripe on the nose */
+
+.teddy-nose::after {
+    content: ')';
+    display: block;
+    background: #000;
+    height: 35px;
+    width: 25px;
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    right: 35px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+.teddy-ear-left,
+.teddy-ear-right {
+    width: 150px;
+    height: 150px;
+    z-index: 110;
+    background: rgb(26, 25, 25);
+    box-shadow: 5px 15px 30px 3px #0e0d0d;
+}
+
+.teddy-ear-left {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border-radius: 45%;
+    z-index: 20;
+}
+
+.teddy-ear-left::after {
+    content: '';
+    display: block;
+    border-radius: 45%;
+    width: 130px;
+    height: 130px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.teddy-ear-right {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border-radius: 45%;
+}
+
+.teddy-ear-right::after {
+    content: '';
+    display: block;
+    border-radius: 45%;
+    width: 130px;
+    height: 130px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 .footer {
     color: var(--white);
     padding: .760rem;
@@ -238,9 +443,10 @@ body {
 
 
 
+
 /* ******** Media Queries @  700px 43.75 instead of (960 60em ) ******** */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 977px) {
     .d-flex {
         display: flex;
         justify-content: space-between;
