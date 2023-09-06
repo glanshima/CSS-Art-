@@ -1,38 +1,132 @@
-let family = new Object();
-family.name = "DooGande";
-family.headOfFamily = "Husband";
-family.motherOfFamily = "Wife";
-family.wife = "Dooshima Abur";
-family.husband = "Gandepuun Lanshima"
-family.children = "Ngueavese Abur";
-family.bioInfo = function() {
-    return family.husband + " is married to " + family.wife + " bringing to gether what became know as " + family.name;
+
+const header = document.querySelector('.header');
+const canvas = document.querySelector('.canvas');
+const menuIcon = document.querySelector('.menu-icon ');
+const menu = document.querySelector('.menu ');
+let canvasPos = canvas.getBoundingClientRect().bottom;
+let menuOpenedState = false;
+/* event delegation  */
+
+
+function clickEvents(type, selector, callback) {
+    document.addEventListener(type, (e) => {
+        if (e.target.matches(selector)) callback(e);
+    })
 }
 
-console.log(family.bioInfo());
+/* open and close responsive menu */
 
-let Man = {
-    name: "Gandepuun Lanshima",
-    age: 23,
-    sex: "Male",
-    bioData: function() {
-        return this.name + " is a " + this.age + " boy";
+clickEvents('click', '.menu', (e) => {
+    if (menuOpenedState === false) {
+        header.classList.add('open');
+        menuIcon.classList.add('spin');
+        menuOpenedState = true;
+
+    } else if (menuOpenedState === true) {
+        header.classList.remove('open');
+        menuIcon.classList.remove('spin');
+        menuOpenedState = false
+    }
+
+})
+
+/* 
+menu.addEventListener('click', (e) => {
+    if (menuOpenedState === false) {
+        header.classList.add('open');
+        menuIcon.classList.add('spin');
+        menuOpenedState = true;
+
+    } else if (menuOpenedState === true) {
+        header.classList.remove('open');
+        menuIcon.classList.remove('spin');
+        menuOpenedState = false
+    }
+}) */
+
+function stickHeader(e) {
+
+    let scrollPos = window.scrollY;
+    if (scrollPos > 100) {
+        header.classList.add('sticky');
+        header.style.cssText = "position: sticky; top: 0;";
+
+    } else {
+        header.classList.remove('sticky');
+        header.style.cssText = "position: relative; top: 0;";
     }
 }
-console.log(Man.bioData());
-
-function Boy(name, age, sex, status) {
-    this.name = name,
-        this.age = age,
-        this.sex = sex,
-        this.status = status
-};
-
-let student = new Boy("Terfa Lanshima", 24, "Male", "Single");
-
-console.log(student.status);
-
-document.querySelector(".sphere1").innerHTML = "<h1>This is the div</h1>";
 
 
 
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth >= 700) {
+        if (menuOpenedState === true) {
+            header.classList.remove('open')
+            menuIcon.classList.remove('spin');
+            menuOpenedState = false
+        }
+    }
+})
+
+window.addEventListener('scroll', (e) => {
+    if (menuOpenedState === true) {
+        header.classList.remove('open')
+        menuIcon.classList.remove('spin');
+        menuOpenedState = false;
+        stickHeader(e);
+    } else {
+        stickHeader(e);
+    }
+
+})
+
+
+
+//Bear Script
+
+let getTeddyHead = document.querySelector('.teddy-head');
+
+let teddyEyeLeft = document.querySelector('.teddy-eye-left');
+let teddyEyeRight = document.querySelector('.teddy-eye-right');
+
+closeEyesEvents('mouseover', ".teddy-eye-left", e => {
+
+    teddyEyeLeft.style.cssText = "background-color: #270303; cursor: pointer";
+    teddyEyeLeftAfter.innerHTML = ".teddy-eye-left:after {background: #270303}";
+})
+closeEyesEvents('mouseover', ".teddy-eye-right", e => {
+
+    teddyEyeRight.style.cssText = "background-color: #270303; cursor: pointer";
+    teddyEyeRightAfter.innerHTML = ".teddy-eye-right:after {background: #270303}";
+})
+
+
+
+function closeEyesEvents(type, selector, callback) {
+    document.addEventListener(type, (e) => {
+        if (e.target.matches(selector)) callback(e);
+    })
+
+}
+
+//let teddyEyeCS = window.getComputedStyle(teddyEyeLeft, "::after");
+
+//accessing pseudo element to change color
+
+let teddyEyeLeftAfter = document.head.appendChild(document.createElement("style"));
+let teddyEyeRightAfter = document.head.appendChild(document.createElement("style"));
+
+
+
+closeEyesEvents('mouseout', ".teddy-eyes", e => {
+    setTimeout(() => {
+        teddyEyeLeft.style = "background-color: #fff";
+        teddyEyeRight.style = "background-color: #fff";
+        teddyEyeLeftAfter.innerHTML = ".teddy-eye-left:after {background: #000}";
+        teddyEyeRightAfter.innerHTML = ".teddy-eye-right:after {background: #000}";
+    }, 500);
+
+})
+
+//console.log(teddyEyeCS.backgroundColor);
