@@ -1,21 +1,197 @@
-* {
+*,
+::after,
+::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+}
+
+:root {
+    --black: #2E323F;
+    --bluish-black: #3B4050;
+    --dark-gray: #6F737F;
+    --white: #fff;
+    --yellowish-gray: #a59678;
+    --transition-1: .5s;
+    --transition-2: 1s;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: roboto-black;
+    src: url("/assets/fonts/Roboto-Black.ttf");
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 
 body {
+    background-color: var(--dark-gray);
+    
+    }
+    
+    .container {
+        max-width: 1200px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* ******** Header Style ******** */
+    
+    .header {
+        background: var(--black);
+        height: 4rem;
+        overflow: hidden;
+        padding: .760rem;
+        transition: var(--transition-1) ease;
+        user-select: none;
+        z-index: 1000;
+    }
+    
+    .header.open {
+        height: 25rem;
+    }
+    
+    .header__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: .5rem;
+    }
+    
+    .handBurger-menu-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--dark-gray);
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        border: 2px double var(--black);
+        filter: brightness(1.5);
+    }
+    
+    .menu-icon.spin {
+        transform: rotate(90deg);
+    }
+    
+    .menu-icon {
+        height: 5px;
+        width: 25px;
+        background: var(--black);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        border-radius: 100px;
+        transition: var(--transition-2);
+    }
+    
+    .menu-icon::before {
+        content: '';
+        height: 5px;
+        width: 25px;
+        bottom: 130%;
+        left: 0;
+        background: var(--black);
+        display: block;
+        position: absolute;
+        border-radius: 100px;
+    }
+    
+    .menu-icon::after {
+        content: '';
+        height: 5px;
+        width: 25px;
+        top: 130%;
+        left: 0;
+        background: var(--black);
+        display: block;
+        position: absolute;
+        border-radius: 100px;
+    }
+    
+    .title {
+        color: var(--white);
+    }
+    
+    .main-nav {
+        padding: .8rem;
+        text-align: center;
+        user-select: none;
+        margin-top: 1rem;
+    }
+    
+    .nav-list__item {
+        transition: width var(--transition-1);
+    }
+    
+    .nav-list__item+.nav-list__item {
+        margin-top: .8rem;
+    }
+    
+    .nav-list__link {
+        color: var(--white);
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: .2em .75em;
+        border-radius: 100px;
+        transition: var(--transition-2);
+        position: relative;
+    }
+    
+    .nav-list__link::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        border-radius: 100px;
+        transition: .5s ease;
+    }
+    
+    .nav-list__item:hover .nav-list__link::after {
+        background: #00000072;
+        color: var(--white);
     width: 100%;
-    height: 100vh;
 }
 
-.main {
+.secondary-nav {
+    margin-top: .8rem;
+}
+
+.nav-list__btn {
+    background: var(--white);
+    color: var(--black);
+}
+
+.canvas {
+    margin: 1rem 0;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 5px 10px #2E323F;
 }
 
 .yellow-board {
@@ -51,4 +227,75 @@ body {
     border-radius: 50%;
     transform: rotate(0deg);
     box-shadow: -33px 70px 20px 1px rgba(1, 1, 1, 0.6), inset 47px -47px 60px rgb(167, 167, 70);
+}
+.footer {
+    color: var(--white);
+    padding: .760rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ******** Media Queries @  700px 43.75 instead of (960 60em ) ******** */
+
+@media screen and (min-width: 700px) {
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content .container {
+        gap: 1.25rem;
+    }
+
+    .main-content__aside {
+        gap: 1.25rem;
+    }
+
+    .aside-col {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .handBurger-menu-icon {
+        display: none;
+    }
+
+    .header__content-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+
+    .main-nav {
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .secondary-nav {
+        margin: 0;
+        gap: 1.25rem;
+    }
+
+    .nav-list__item+.nav-list__item {
+        margin: 0;
+    }
+
+
+}
+
+
+/* ******** Media Queries @  1000px instead of ( 43.75 ) ******** */
+
+@media screen and (min-width: 1000px) {
+    .d-flex-wide {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
 }
