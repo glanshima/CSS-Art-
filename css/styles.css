@@ -186,6 +186,7 @@ body {
 }
 
 .canvas {
+
     margin: 1rem 0;
     height: 100vh;
     background-color: var(--white);
@@ -253,7 +254,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     height: 400px;
     margin: 0 auto;
@@ -264,13 +265,13 @@ body {
 /* Bear Head */
 
 .teddy-head {
-    width: 250px;
-    height: 250px;
+width: 200px;
+    height: 200px;
     background: rgb(66, 9, 9);
     border-radius: 50%;
     position: relative;
     box-shadow: 5px 15px 30px 3px #0e0d0d, inset 30px 3px 30px #9e1b1b, inset -20px -3px 30px #9e1b1b;
-    z-index: 1000;
+    z-index: 999;
 }
 
 
@@ -278,8 +279,8 @@ body {
 
 .teddy-eye-left,
 .teddy-eye-right {
-    width: 50px;
-    height: 60px;
+    width: 30px;
+        height: 40px;
     background: #f7f2f2;
     margin: 10px;
     border-radius: 49%;
@@ -295,7 +296,7 @@ body {
 
 .teddy-eye-left {
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 50px;
 }
 
@@ -306,17 +307,17 @@ body {
     content: '';
     display: block;
     background: #000;
-    height: 30px;
-    width: 20px;
+    height: 15px;
+        width: 10px;
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 15px;
+        right: 5px;
     border-radius: 50%;
 }
 
 .teddy-eye-right {
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 50px;
 }
 
@@ -327,11 +328,11 @@ body {
     content: '';
     display: block;
     background: #000;
-    height: 30px;
-    width: 20px;
+    height: 15px;
+        width: 10px;
     position: absolute;
-    top: 20px;
-    right: 15px;
+    top: 15px;
+        right: 10px;
     border-radius: 50%;
 }
 
@@ -345,8 +346,8 @@ body {
 */
 
 .teddy-nose {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+        height: 80px;
     border-radius: 50%;
     background: #f7f2f2;
     position: absolute;
@@ -364,8 +365,8 @@ body {
     height: 35px;
     width: 25px;
     position: absolute;
-    top: 60px;
-    right: 32px;
+    top: 35px;
+        right: 13px;
     border-radius: 50%;
     transform: rotate(90deg);
     font-size: 4em;
@@ -392,8 +393,8 @@ body {
 
 .teddy-ear-left,
 .teddy-ear-right {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+        height: 100px;
     z-index: 110;
     background: rgb(26, 25, 25);
     box-shadow: 5px 15px 30px 3px #0e0d0d;
@@ -401,8 +402,8 @@ body {
 
 .teddy-ear-left {
     position: absolute;
-    top: 10%;
-    left: 5%;
+    top: 60px;
+        left: 30px;
     border-radius: 45%;
     z-index: 20;
 }
@@ -411,18 +412,18 @@ body {
     content: '';
     display: block;
     border-radius: 45%;
-    width: 130px;
-    height: 130px;
+    width: 110px;
+        height: 110px;
     background: rgb(0, 0, 0);
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+        left: 8px;
 }
 
 .teddy-ear-right {
     position: absolute;
-    top: 10%;
-    right: 5%;
+    top: 60px;
+        right: 40px;
     border-radius: 45%;
 }
 
@@ -430,12 +431,12 @@ body {
     content: '';
     display: block;
     border-radius: 45%;
-    width: 130px;
-    height: 130px;
+    width: 110px;
+        height: 110px;
     background: rgb(0, 0, 0);
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+        left: 5px;
 }
 /* ******** Mickey Arts ******** */
 
@@ -880,7 +881,147 @@ body {
 .yellow-board {
     width: 40%;
 }
+/* Bear Head */
 
+.teddy-head {
+    width: 250px;
+    height: 250px;
+
+}
+
+/* teddy eyes */
+
+.teddy-eye-left,
+.teddy-eye-right {
+    width: 50px;
+    height: 60px;
+
+}
+
+
+/*
+.teddy-eye-left:hover,
+.teddy-eye-right:hover {
+    height: 70px;
+}
+*/
+
+.teddy-eye-left {
+
+    top: 60px;
+    left: 50px;
+}
+
+
+/* left eyeball */
+
+.teddy-eye-left::after {
+
+    height: 30px;
+        width: 20px;
+    
+        top: 20px;
+        right: 10px;
+    
+    }
+    
+    .teddy-eye-right {
+    
+        top: 60px;
+        right: 50px;
+    }
+    
+    /* right eye ball */
+    
+    .teddy-eye-right::after {
+    
+        height: 30px;
+        width: 20px;
+    
+        top: 20px;
+        right: 15px;
+    
+    }
+    
+    /*
+        .teddy-eye-left:hover::after,
+        .teddy-eye-right:hover::after {
+            top: 15px;
+            right: 20px;
+        }
+        */
+    
+    .teddy-nose {
+        width: 100px;
+        height: 100px;
+    
+        top: 45%;
+        left: 31%;
+    
+    }
+    
+    /* mouth line */
+    
+    .teddy-nose::before {
+    
+        height: 35px;
+        width: 25px;
+    
+        top: 60px;
+        right: 32px;
+    
+    }
+    
+    /* black nose tip and white stripe on the nose */
+    
+    .teddy-nose::after {
+    
+        height: 35px;
+        width: 25px;
+    
+        top: 10px;
+        right: 35px;
+    
+    }
+    
+    .teddy-ear-left,
+    .teddy-ear-right {
+        width: 150px;
+        height: 150px;
+    
+    }
+    
+    .teddy-ear-left {
+    
+        top: 10%;
+        left: 5%;
+    
+    }
+    
+    .teddy-ear-left::after {
+    
+        width: 130px;
+        height: 130px;
+    
+        top: 10px;
+        left: 10px;
+    }
+    
+    .teddy-ear-right {
+    
+        top: 10%;
+        right: 5%;
+    
+    }
+    
+    .teddy-ear-right::after {
+    
+        width: 130px;
+        height: 130px;
+    
+        top: 10px;
+        left: 10px;
+    }
 }
 
 
