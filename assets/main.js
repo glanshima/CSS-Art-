@@ -33,3 +33,6 @@ let student = new Boy("Terfa Lanshima", 24, "Male", "Single");
 console.log(student.status);
 
 document.querySelector(".sphere1").innerHTML = "<h1>This is the div</h1>";
+
+
+
