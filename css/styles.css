@@ -761,6 +761,7 @@ width: 200px;
 /* ******** Food Arts ******** */
 .plate_board {
     width: 100%;
+    max-width: 500px;
     display: flex;
     padding: 2rem;
     justify-content: center;
@@ -774,8 +775,8 @@ width: 200px;
 .plate {
     
     background: rgb(139, 0, 0);
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     transform: rotateX(-225deg);
     position: relative;
@@ -787,8 +788,8 @@ width: 200px;
     display: block;
     /*border: 1px solid red;*/
     background: rgb(139, 0, 0);
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     transform: rotateX(-202deg) translate3d(0, 20px, -100px);
     position: absolute;
@@ -801,38 +802,38 @@ width: 200px;
 .poundo {
     background: #fafad2;
     border-radius: 45%;
-    width: 120px;
-    height: 230px;
+    width: 80px;
+    height: 120px;
     position: inherit;
-    top: 200px;
-    left: 150px;
+    top: 150px;
+    left: 100px;
     box-shadow: 4px -50px 0px black, inset 2px 60px 20px #5a5a5a;
 }
-
-.bowl {
-    background-image: radial-gradient(circle at 2px 2px, #eeee87 1px, rgb(71, 31, 31) 2px);
-    background-size: 1px 1px;
-    border-radius: 50%;
-    width: 140px;
-    height: 240px;
-    position: absolute;
-    bottom: 100px;
-    left: 150px;
-    transform: rotateY(360deg);
-    box-shadow: 4px -30px 40px black, inset 2px -40px 20px rgb(31, 34, 170), inset 10px 40px 0px #1f2c9c;
-}
-
 .semo {
     background: #fafad2;
     border-radius: 49%;
-    width: 120px;
-    height: 230px;
+    width: 80px;
+    height: 120px;
     position: inherit;
-    top: -40%;
+    top: -30%;
     left: 30px;
     transform: scaleY(15deg);
     box-shadow: 4px -50px 10px black, inset 1px 60px 20px #5a5a5a;
 }
+.bowl {
+    background-image: radial-gradient(circle at 2px 2px, #eeee87 1px, rgb(71, 31, 31) 2px);
+    background-size: 1px 1px;
+    border-radius: 50%;
+    width: 100px;
+    height: 140px;
+    position: absolute;
+    bottom: 100px;
+    left: 120px;
+    transform: rotateY(360deg);
+    box-shadow: 4px -30px 40px black, inset 2px -40px 20px rgb(31, 34, 170), inset 10px 40px 0px #1f2c9c;
+}
+
+
 .footer {
     color: var(--white);
     padding: .760rem;
@@ -891,7 +892,9 @@ width: 200px;
         margin: 0;
     }
 .yellow-board {
-    width: 40%;
+    
+width: 50%;    
+   
 }
 /* Bear Head */
 
@@ -1020,16 +1023,44 @@ width: 200px;
         left: 10px;
     }
     /*RESPONSIVE PLATE*/
+    .plate_board { 
+       width: 50%; 
+       padding: 1rem;
+        
+        
+    }
     .plate {
         width: 350px;
         height: 350px;
     }
+    
     .plate::before {
         width: 350px;
         height: 350px;
         top: -20px;
-        right: -150; 
+        right: -200;
     }
+    
+    .poundo {
+        width: 120px;
+        height: 230px;
+        top: 200px;
+        left: 150px; 
+    }
+    .semo {
+        width: 120px;
+        height: 230px; 
+        top: -40%;
+        left: 30px; 
+    } 
+    .bowl {
+        width: 140px;
+        height: 240px;
+        bottom: 100px;
+        left: 150px;       
+    }
+    
+    
 }
 /* ******** Media Queries @  1000px instead of ( 43.75 ) ******** */
 
