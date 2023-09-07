@@ -1006,15 +1006,6 @@ padding: 1rem;
         gap: 1.25rem;
     }
 
-    .main-content__aside {
-        gap: 1.25rem;
-    }
-
-    .aside-col {
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-
     .handBurger-menu-icon {
         display: none;
     }
@@ -1037,6 +1028,7 @@ padding: 1rem;
         margin: 0;
         gap: 1.25rem;
         align-items: center;
+        flex-direction: row;
     }
 
     .nav-list__item+.nav-list__item {
