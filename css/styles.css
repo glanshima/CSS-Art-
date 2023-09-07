@@ -178,15 +178,24 @@ body {
 
 .secondary-nav {
     margin-top: .8rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .nav-list__btn {
+    padding: 0;
     background: var(--white);
     color: var(--black);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
 }
-
+.profile{
+   width: 100%;
+   border-radius: 50%;
+}
 .canvas {
-
     margin: 1rem 0;
     height: 100vh;
     background-color: var(--white);
@@ -751,6 +760,7 @@ width: 200px;
 
 /* ******** Food Arts ******** */
 .plate_board {
+    width: 100%;
     display: flex;
     padding: 2rem;
     justify-content: center;
@@ -762,12 +772,12 @@ width: 200px;
 }
 
 .plate {
-    /*border: 1px solid red;*/
+    
     background: rgb(139, 0, 0);
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    transform: rotateX(-245deg);
+    transform: rotateX(-225deg);
     position: relative;
     box-shadow: 0px -14px #f7f2f2;
 }
@@ -783,7 +793,7 @@ width: 200px;
     transform: rotateX(-202deg) translate3d(0, 20px, -100px);
     position: absolute;
     top: -20px;
-    right: -200;
+    right: -150;
     z-index: 0;
     box-shadow: inset 15px 17px 100px #9e1b1b;
 }
@@ -868,11 +878,13 @@ width: 200px;
         padding: 0;
         flex-direction: row;
         flex-grow: 1;
+        align-items: center;
     }
 
     .secondary-nav {
         margin: 0;
         gap: 1.25rem;
+        align-items: center;
     }
 
     .nav-list__item+.nav-list__item {
@@ -962,69 +974,63 @@ width: 200px;
     
     /* mouth line */
     
-    .teddy-nose::before {
-    
+    .teddy-nose::before { 
         height: 35px;
         width: 25px;
-    
         top: 60px;
-        right: 32px;
-    
+        right: 32px; 
     }
     
     /* black nose tip and white stripe on the nose */
     
-    .teddy-nose::after {
-    
+    .teddy-nose::after { 
         height: 35px;
-        width: 25px;
-    
+        width: 25px; 
         top: 10px;
-        right: 35px;
-    
+        right: 35px; 
     }
     
     .teddy-ear-left,
     .teddy-ear-right {
         width: 150px;
-        height: 150px;
-    
+        height: 150px; 
     }
     
-    .teddy-ear-left {
-    
+    .teddy-ear-left { 
         top: 10%;
-        left: 5%;
-    
+        left: 5%; 
     }
     
-    .teddy-ear-left::after {
-    
+    .teddy-ear-left::after { 
         width: 130px;
-        height: 130px;
-    
+        height: 130px; 
         top: 10px;
         left: 10px;
     }
     
-    .teddy-ear-right {
-    
+    .teddy-ear-right { 
         top: 10%;
-        right: 5%;
-    
+        right: 5%; 
     }
     
-    .teddy-ear-right::after {
-    
+    .teddy-ear-right::after { 
         width: 130px;
         height: 130px;
-    
         top: 10px;
         left: 10px;
+    }
+    /*RESPONSIVE PLATE*/
+    .plate {
+        width: 350px;
+        height: 350px;
+    }
+    .plate::before {
+        width: 350px;
+        height: 350px;
+        top: -20px;
+        right: -150; 
     }
 }
-
-
 /* ******** Media Queries @  1000px instead of ( 43.75 ) ******** */
 
 @media screen and (min-width: 1000px) {
