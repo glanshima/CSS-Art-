@@ -46,12 +46,13 @@ body {
     
     }
     
-    .container {
+.container {
         max-width: 1200px;
         width: 80%;
         margin: 0 auto;
-    }
     
+}
+
     /* ******** Header Style ******** */
     
     .header {
@@ -984,6 +985,110 @@ padding: 1rem;
 .link_box:last-child::after {
     box-shadow: -100px 100px 20px rgba(0, 0, 0, 0.25);
 }
+
+/* Login Page Styles */
+
+.loginform {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	flex-direction: column;	 
+	background-color: #ebe6e6;
+	
+	max-width: 450px;
+	padding: 1rem 1rem 1.5rem 1rem;
+	border-radius: 1em;
+	box-shadow:   3px 3px 5px rgba(54, 53, 53, 0.865),
+	-5px -5px 5px #fff;
+				
+	}
+	.company_logo{
+	display: flex;
+	justify-content: center;	
+		width: 50%;
+		height: 1hv;
+	}
+	.company_logo img{
+		width: 90%;
+	}
+.inputs{	
+	width: 100%;
+   padding: 0 .5rem; 
+	display: flex;
+    justify-content: center;	
+	flex-direction: column; 
+}
+.form_input {
+	border: none;
+     
+	outline: none;
+    display: flex;
+   
+    align-items: center;	
+	background-color: #f5f5f5;
+	box-shadow:   inset 1px 1px 5px rgba(54, 53, 53, 0.865),
+	inset -5px -5px 5px #fff;
+	padding:.5rem ;
+	margin: 20px 0%;
+	border-radius: 1rem;	
+}
+.form_input i{
+	color:#7e7e7e ;
+    font-size: 1.5rem;
+}
+.fa.fa-eye{
+    color: #000;
+}
+.form_input.password i {
+cursor: pointer;
+}
+.form_input input{
+	font-size: 1.2rem;
+	line-height: 2;
+	outline: none;
+    border: none;	
+	background-color: #f5f5f5;
+   flex-grow: 1;
+   padding: 0 2%; 
+} 
+.login_btn {
+		outline: none;
+		border: none;
+		background-color: #194ce5;
+		box-shadow:   3px 3px 5px rgba(54, 53, 53, 0.865), 
+		-5px -5px 5px #f5f5f5;
+		width: 80%;
+		padding: 1rem;
+		border-radius: 4em;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 800;
+		cursor: pointer;	
+		transition: .5s;
+		}
+		.login_btn:active{	
+			box-shadow:   3px 3px 2px #ffffff, 
+		-2px -2px 2px #01034f;
+
+		}
+
+
+        .new_user_links {
+            text-align: center;
+            margin: 20px;
+            }
+            .new_user_links a {
+             margin: 5px;
+            }
+.thank_you_text{
+    margin-top: 1.2rem;
+    
+}
+.thank_you_message{
+    font-size: 1.5rem;
+    color: #006400;
+    font-weight: 500;
+} 
 /* Footer Styles */
 .footer {
     color: var(--white);

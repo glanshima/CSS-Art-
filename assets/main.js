@@ -130,3 +130,50 @@ closeEyesEvents('mouseout', ".teddy-eyes", e => {
 })
 
 //console.log(teddyEyeCS.backgroundColor);
+
+
+//login
+
+const hidePassIcon = document.querySelector('#hide_pass');
+const password_input = document.querySelector('.password_field');
+const userName_input = document.querySelector('.username_field')
+const eyeIcon = document.querySelector('.fa-eye');
+const login_canvas = document.querySelector('.canvas.login');
+const loginBtn = document.querySelector('.login_btn');
+
+hidePassIcon.addEventListener('click', ()=>{
+   if(hidePassIcon.classList.contains('fa-eye-slash')){
+       hidePassIcon.classList.remove('fa-eye-slash');
+       hidePassIcon.classList.add('fa-eye');
+       password_input.setAttribute("type", "text");
+
+   }else if(hidePassIcon.classList.contains('fa-eye')){
+    hidePassIcon.classList.remove('fa-eye');
+    hidePassIcon.classList.add('fa-eye-slash');
+    password_input.setAttribute("type", "password");
+   
+   } 
+
+})
+
+
+loginBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    
+   if(userName_input.value=""){
+alert('enter field')
+   }else{
+    let msg_box = document.createElement("div");
+    msg_box.className = "thank_you_text";
+    let msg_paragraph = document.createElement('P') 
+    msg_paragraph.className = "thank_you_message"
+    msg_paragraph.textContent=userName_input.value; ;
+    msg_box.appendChild(msg_paragraph)
+    login_canvas.appendChild(msg_box)
+    userName_input.value = "";
+    userName_input.focus();
+   } 
+    
+    
+   
+})
