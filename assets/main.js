@@ -142,14 +142,14 @@ const login_canvas = document.querySelector('.canvas.login');
 const loginBtn = document.querySelector('.login_btn');
 
 hidePassIcon.addEventListener('click', ()=>{
-   if(hidePassIcon.classList.contains('fa-eye-slash')){
-       hidePassIcon.classList.remove('fa-eye-slash');
-       hidePassIcon.classList.add('fa-eye');
+   if(hidePassIcon.classList.contains('fa-eye')){
+       hidePassIcon.classList.remove('fa-eye');
+       hidePassIcon.classList.add('fa-eye-slash');
        password_input.setAttribute("type", "text");
 
-   }else if(hidePassIcon.classList.contains('fa-eye')){
-    hidePassIcon.classList.remove('fa-eye');
-    hidePassIcon.classList.add('fa-eye-slash');
+   }else if(hidePassIcon.classList.contains('fa-eye-slash')){
+    hidePassIcon.classList.remove('fa-eye-slash');
+    hidePassIcon.classList.add('fa-eye');
     password_input.setAttribute("type", "password");
    
    } 
